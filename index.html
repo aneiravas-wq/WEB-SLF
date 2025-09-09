@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios La Foresta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="Logo SLF crudo.png" alt="Servicios La Foresta Logo" class="nav-logo" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#fruits">Our Fruits</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Premium Cherries & Fresh Fruits from Chile to the World</h1>
+      <p>Delivering freshness, flavor and quality from the orchards of Chile, at the foothills of the majestic Andes Mountains.</p>
+      <a href="#fruits" class="cta-button">Discover Our Fruits</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about about-premium">
+    <!-- Intro con overlay -->
+    <div class="about-intro">
+      <div class="about-overlay"></div>
+      <div class="container">
+        <h2>About Us</h2>
+        <p class="about-frase">“15 years exporting Chilean freshness worldwide”</p>
+        <p>We are a family-owned company dedicated to the production, packaging, and export of cherries and other fruits. 
+        We are located in Chile’s fruit heartland, in the Maule Region. For more than 15 years, we have been working 
+        in this industry to deliver the highest quality fruits to the most demanding markets worldwide. Together with 
+        our collaborators, growers, and suppliers, we are committed to producing our fruits in an environmentally 
+        friendly way, working in a clean and healthy environment to achieve the best possible quality.</p>
+      </div>
+    </div>
+
+    <!-- Our Orchards -->
+    <div class="container about-subsection" id="our-orchards">
+      <h3>Our Orchards</h3>
+      <p class="subsection-intro">A glimpse of our cherry and plum orchards in Chile’s Maule Region.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="cz1.jpg" alt="Orchard view (CZ1)" loading="lazy">
+          <figcaption>Orchard • CZ1</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="CZ6.jpg" alt="Orchard view (CZ6)" loading="lazy">
+          <figcaption>Orchard • CZ6</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Our Facilities -->
+    <div class="container about-subsection" id="our-facilities">
+      <h3>Our Facilities</h3>
+      <p class="subsection-intro">State-of-the-art facilities for packing and cold chain management to ensure quality and freshness.</p>
+      <div class="media-grid">
+        <figure class="media-item">
+          <img src="FAC1.jpg" alt="Packing facility (FAC1)" loading="lazy">
+          <figcaption>Packing facility • FAC1</figcaption>
+        </figure>
+        <figure class="media-item">
+          <video controls playsinline preload="metadata" poster="FAC2.jpg">
+            <source src="FAC2.mp4" type="video/mp4" />
+            <source src="FAC2.MOV" type="video/quicktime" />
+            Your browser does not support embedded videos.
+          </video>
+          <figcaption>Facilities video • FAC2</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Fruits -->
+  <section id="fruits" class="fruits fruits-premium">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Premium Fruits</h2>
+        <p>Exceptional quality from Chilean orchards</p>
+      </div>
+      <div class="fruits-grid">
+        
+        <!-- Cherries -->
+        <div class="fruit-card cherry-card">
+          <h3>Cherries</h3>
+          <p><strong>Season:</strong> November – January</p>
+          <p><strong>Characteristics:</strong> Sweet, firm, deep red color</p>
+          <p><strong>Varieties:</strong> Nimba, Sweet Aryana, Royal Dawn, Santina, Bing, Kordia, Regina, Sweetheart and Rainier</p>
+          <p><strong>Sizes:</strong> XL (24–26 mm), J (26–28 mm), 2J (28–30 mm), 3J (30–32 mm), 4J (32 mm and up)</p>
+          <p><strong>Packaging:</strong> 5 kg and 2.5 kg bulk. 2 lbs clamshells.</p>
+          <div class="fruit-gallery">
+            <div class="fruit-item"><img src="cz2.jpg" alt="Cherry CZ2"><div class="fruit-overlay">Sweet & Firm</div></div>
+            <div class="fruit-item"><img src="cz3.jpg" alt="Cherry CZ3"><div class="fruit-overlay">Export Quality</div></div>
+            <div class="fruit-item"><img src="cz4.jpg" alt="Cherry CZ4"><div class="fruit-overlay">Deep Red Color</div></div>
+            <div class="fruit-item"><img src="cz5.jpg" alt="Cherry CZ5"><div class="fruit-overlay">Premium Size</div></div>
+          </div>
+        </div>
+        
+        <!-- Sugar Plums -->
+        <div class="fruit-card plum-card">
+          <h3>Sugar Plums</h3>
+          <p><strong>Season:</strong> January – March</p>
+          <p><strong>Characteristics:</strong> Very sweet and firm</p>
+          <p><strong>Packaging:</strong> 9 kg plastic box; 5 kg and 2.5 kg cartons.</p>
+          <div class="fruit-gallery">
+            <div class="fruit-item"><img src="SP1.jpg" alt="Plum SP1"><div class="fruit-overlay">Naturally sweet</div></div>
+            <div class="fruit-item"><img src="SP2.jpg" alt="Plum SP2"><div class="fruit-overlay">Juicy & Fresh</div></div>
+            <div class="fruit-item"><img src="SP3.jpg" alt="Plum SP3"><div class="fruit-overlay">Premium Export</div></div>
+            <div class="fruit-item"><img src="SP5.jpg" alt="Plum SP5"><div class="fruit-overlay">Hand-picked</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="contact contact-premium">
+    <div class="contact-overlay"></div>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-glass">
+        <form>
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Your email" required>
+          <textarea placeholder="Your message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Servicios La Foresta SPA</h3>
+        <p>La Montaña, Teno.</p>
+        <p>Curicó - Maule Region, Chile</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container"><p>&copy; 2025 Servicios La Foresta. All rights reserved.</p></div>
+  </footer>
+</body>
+</html>
