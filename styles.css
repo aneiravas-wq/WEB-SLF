@@ -64,7 +64,7 @@ body {
   to { width: 100%; }
 }
 
-/* Global Sections config */
+/* Global Sections */
 .section {
   min-height: 100vh;
   padding: 80px 40px;
@@ -101,9 +101,9 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  background-size: cover;          /* que cubra toda la pantalla */
+  background-size: cover;          /* cubre toda la pantalla */
   background-position: center;     /* centrada */
-  background-attachment: fixed;    /* 👈 efecto parallax simple */
+  background-attachment: fixed;    /* parallax simple en PC */
 }
 .hero-content {
   max-width: 900px;
@@ -154,13 +154,10 @@ body {
   font-style: italic;
   margin-bottom: 20px;
 }
-
-/* Ajuste de imágenes en About */
 .about-subsection {
   margin-top: 40px;
   text-align: center;
 }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -266,14 +263,14 @@ body {
 
 /* Contact */
 .contact {
-  background: linear-gradient(to bottom right, #b89a72, #8c6a45); /* más oscuro que el banner */
+  background: linear-gradient(to bottom right, #b89a72, #8c6a45);
   color: #fff;
 }
 .contact .container {
   max-width: 700px;
   margin: auto;
-  background: rgba(214,193,155,0.92); /* beige translúcido */
-  border: 2px solid #5b1a18; /* ✅ borde burdeos */
+  background: rgba(214,193,155,0.92);
+  border: 2px solid #5b1a18;
   padding: 40px;
   border-radius: 15px;
   backdrop-filter: blur(6px);
