@@ -14,8 +14,8 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #d6c19b; /* Beige del banner */
-  color: #5b1a18; /* Burdeos */
+  background: #d6c19b;
+  color: #5b1a18;
   padding: 0 30px;
   position: sticky;
   top: 0;
@@ -25,10 +25,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px; /* altura navbar */
+  height: 90px;
 }
 .nav-logo {
-  height: 90px; /* logo ocupa toda la altura */
+  height: 90px;
 }
 .nav-menu {
   list-style: none;
@@ -42,12 +42,8 @@ body {
   position: relative;
   transition: color 0.3s ease;
 }
-.nav-menu a:hover {
-  color: #000;
-}
-.nav-menu a.active {
-  color: #872020; /* burdeos fuerte */
-}
+.nav-menu a:hover { color: #000; }
+.nav-menu a.active { color: #872020; }
 .nav-menu a.active::after {
   content: "";
   position: absolute;
@@ -64,71 +60,58 @@ body {
   to { width: 100%; }
 }
 
-/* Global Sections */
+/* Secciones base */
 .section {
   min-height: 100vh;
   padding: 80px 40px;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
 }
-.section h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
+.section h2 { margin-bottom: 20px; font-size: 2rem; }
 
-/* Overlay base (fotos) */
-.hero::before,
-.about::before,
-.fruits::before {
+/* HERO con animación lateral */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("andes-mountains.jpg");
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  background-size: cover;
+  animation: mountainsSlide 40s linear infinite;
+}
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.35);
   z-index: 1;
 }
-.hero > *, .about > *, .fruits > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Hero con animación horizontal */
-.hero {
-  background: url("andes-mountains.jpg") repeat-x;
-  background-size: cover;
-  animation: moveBackground 25s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-@keyframes moveBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -1000px 0;
-  }
+.hero > * { position: relative; z-index: 2; }
+@keyframes mountainsSlide {
+  from { background-position: 0 50%; }
+  to   { background-position: -2000px 50%; }
 }
 .hero-content {
   max-width: 900px;
-  background: rgba(214,193,155,0.85); /* Beige translúcido */
+  background: rgba(214,193,155,0.85);
   padding: 40px;
   border-radius: 15px;
   backdrop-filter: blur(3px);
   animation: fadeUp 1s ease;
-  color: #5b1a18; /* Texto burdeos */
+  color: #5b1a18;
 }
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
+.hero h1 { font-size: 2.4rem; margin-bottom: 20px; }
+.hero p  { font-size: 1.1rem; margin-bottom: 30px; }
 .cta-button {
   background: #5b1a18;
   color: #fff;
@@ -137,18 +120,24 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  text-decoration: none;
   transition: background 0.3s;
 }
-.cta-button:hover {
-  background: #872020;
-}
+.cta-button:hover { background: #872020; }
 
-/* About */
+/* ABOUT */
 .about {
-  background-image: url("lamina8.jpg");
+  position: relative;
   color: white;
 }
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("lamina8.jpg") center/cover no-repeat;
+  filter: brightness(0.85);
+  z-index: 0;
+}
+.about > * { position: relative; z-index: 1; }
 .about .container {
   max-width: 1000px;
   margin: auto;
@@ -157,14 +146,9 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(8px);
 }
-.about-frase {
-  font-style: italic;
-  margin-bottom: 20px;
-}
-.about-subsection {
-  margin-top: 40px;
-  text-align: center;
-}
+.about-frase { font-style: italic; margin-bottom: 20px; }
+.about-subsection { margin-top: 40px; text-align: center; }
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -179,13 +163,8 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
 }
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-.gallery-item figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-}
+.gallery-item img:hover { transform: scale(1.05); }
+.gallery-item figcaption { margin-top: 8px; font-size: 0.9rem; }
 
 /* Facilities */
 .media-grid {
@@ -196,23 +175,34 @@ body {
 }
 .media-item img,
 .media-item video {
+  display: block;
   width: 100%;
   max-width: 500px;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
-.media-item figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #ccc;
+.media-item video {
+  outline: none;
+  border: none;
+  background: #000; /* fallback */
 }
+.media-item figcaption { margin-top: 8px; font-size: 0.9rem; color: #ccc; }
 
-/* Fruits */
+/* FRUITS */
 .fruits {
-  background-image: url("sp2.jpg");
+  position: relative;
   color: white;
 }
+.fruits::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("sp2.jpg") center/cover no-repeat;
+  filter: brightness(0.8);
+  z-index: 0;
+}
+.fruits > * { position: relative; z-index: 1; }
 .fruits .container {
   max-width: 1000px;
   margin: auto;
@@ -221,11 +211,7 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(8px);
 }
-.fruits-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
+.fruits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .fruit-card {
   background: rgba(255,255,255,0.12);
   border-radius: 12px;
@@ -233,9 +219,7 @@ body {
   backdrop-filter: blur(6px);
   transition: transform 0.3s ease;
 }
-.fruit-card:hover {
-  transform: scale(1.03);
-}
+.fruit-card:hover { transform: scale(1.03); }
 .fruit-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -243,23 +227,16 @@ body {
   justify-content: center;
   margin-top: 15px;
 }
-.fruit-item {
-  position: relative;
-  width: 45%;
-}
+.fruit-item { position: relative; width: 45%; }
 .fruit-item img {
   width: 100%;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.fruit-item:hover img {
-  transform: scale(1.05);
-}
+.fruit-item:hover img { transform: scale(1.05); }
 .fruit-overlay {
   position: absolute;
-  bottom: 8px;
-  left: 8px;
-  right: 8px;
+  bottom: 8px; left: 8px; right: 8px;
   background: rgba(0,0,0,0.6);
   color: #fff;
   font-size: 0.8rem;
@@ -268,7 +245,7 @@ body {
   text-align: center;
 }
 
-/* Contact */
+/* CONTACT */
 .contact {
   background: linear-gradient(to bottom right, #b89a72, #8c6a45);
   color: #fff;
@@ -307,31 +284,24 @@ body {
   transition: background 0.3s;
   color: #fff;
 }
-.contact button:hover {
-  background: #872020;
-}
+.contact button:hover { background: #872020; }
 
 /* Footer */
 .footer {
   background: #222;
-  color: white;
+  color: #fff;
   padding: 15px 0;
   text-align: center;
 }
 
-/* Animations */
+/* Animaciones */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px);}
-  to { opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .fruits-grid {
-    grid-template-columns: 1fr;
-  }
-  .nav-menu {
-    gap: 15px;
-    font-size: 14px;
-  }
+  .fruits-grid { grid-template-columns: 1fr; }
+  .nav-menu { gap: 15px; font-size: 14px; }
 }
