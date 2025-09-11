@@ -1,217 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios La Foresta</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* --- Core effect styles --- */
-    .section {
-      display: none;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .section.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-      animation: fadeIn 0.6s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px);}
-      to   { opacity: 1; transform: translateY(0);}
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLF Export - Premium Cherries and Plums from Chile</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">
-        <img src="Logo SLF crudo.png" alt="Servicios La Foresta Logo" class="nav-logo" />
-      </div>
+      <img src="logo-slf.png" alt="SLF Export Logo" class="nav-logo">
       <ul class="nav-menu">
-        <li><a href="#" onclick="showSection('home')">Home</a></li>
-        <li><a href="#" onclick="showSection('about')">About Us</a></li>
-        <li><a href="#" onclick="showSection('fruits')">Our Fruits</a></li>
-        <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#fruits">Our Fruits</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero section active">
-    <div class="hero-overlay"></div>
+  <!-- HERO -->
+  <section id="home" class="section hero">
     <div class="hero-content">
       <h1>Premium Cherries & Fresh Fruits from Chile to the World</h1>
-      <p>Delivering freshness, flavor and quality from the orchards of Chile, at the foothills of the majestic Andes Mountains.</p>
-      <button onclick="showSection('fruits')" class="cta-button">Discover Our Fruits</button>
+      <p>Delivering excellence in every harvest</p>
+      <a href="#fruits" class="cta-button">Discover Our Fruits</a>
     </div>
   </section>
 
-<!-- ABOUT US -->
-<section id="about" class="section about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p class="about-frase">
-      We are a Chilean exporter specialized in premium cherries and sugar plums, delivering freshness and quality from our orchards to the world.
-    </p>
-
-    <!-- Our Orchards (restaurado) -->
-    <div class="about-subsection" id="our-orchards">
-      <h3>Our Orchards</h3>
-      <p class="subsection-intro">
-        Located in strategic valleys of Chile, our orchards benefit from unique microclimates and rigorous agronomic practices to ensure consistent quality.
-      </p>
-
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="cz1.jpg" alt="Orchard cz1" loading="lazy">
-          <figcaption>Orchard view • cz1</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="cz2.jpg" alt="Orchard cz2" loading="lazy">
-          <figcaption>Harvesting day • cz2</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="cz6.jpg" alt="Orchard CZ6" loading="lazy">
-          <figcaption>Rows and canopy • CZ6</figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <!-- Our Facilities (única instancia) -->
-    <div class="about-subsection" id="our-facilities">
-      <h3>Our Facilities</h3>
-      <p class="subsection-intro">
-        State-of-the-art facilities for packing and cold chain management to ensure quality and freshness.
-      </p>
-
-      <div class="media-grid">
-        <figure class="media-item">
-          <img src="fac1.jpg" alt="Packing facility (fac1)" loading="lazy">
-          <figcaption>Packing facility • FAC1</figcaption>
-        </figure>
-
-        <figure class="media-item">
-          <video
-            controls
-            playsinline
-            preload="metadata"
-            poster="fac2.jpg"
-            style="background:#000"
-          >
-            <source src="fac2.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'">
-            <source src="fac2.mov" type="video/quicktime">
-            Your browser does not support embedded videos.
-          </video>
-          <figcaption>Facilities video • fac2</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <div class="container about-subsection" id="our-facilities">
-      <h3>Our Facilities</h3>
-      <p class="subsection-intro">State-of-the-art facilities for packing and cold chain management to ensure quality and freshness.</p>
-      <div class="media-grid">
-        <figure class="media-item">
-          <img src="fac1.jpg" alt="Packing facility (FAC1)" loading="lazy">
-          <figcaption>Packing facility • FAC1</figcaption>
-        </figure>
-        <figure class="media-item">
-          <video controls playsinline preload="metadata" poster="fac2.jpg">
-            <source src="fac2.mp4" type="video/mp4" />
-            <source src="fac2.MOV" type="video/quicktime" />
-            Your browser does not support embedded videos.
-          </video>
-          <figcaption>Facilities video • fac2</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Fruits -->
-  <section id="fruits" class="fruits fruits-premium section">
+  <!-- ABOUT US -->
+  <section id="about" class="section about">
     <div class="container">
-      <div class="section-header">
-        <h2>Our Premium Fruits</h2>
-        <p>Exceptional quality from Chilean orchards</p>
+      <h2>About Us</h2>
+      <p class="about-frase">
+        We are a Chilean exporter specialized in premium cherries and sugar plums, delivering freshness and quality from our orchards to the world.
+      </p>
+
+      <!-- Our Orchards (única vez) -->
+      <div class="about-subsection" id="our-orchards">
+        <h3>Our Orchards</h3>
+        <p class="subsection-intro">
+          Located in strategic valleys of Chile, our orchards benefit from unique microclimates and rigorous agronomic practices to ensure consistent quality.
+        </p>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="cz1.jpg" alt="Orchard CZ1" loading="lazy">
+            <figcaption>Orchard view • CZ1</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="cz2.jpg" alt="Orchard CZ2" loading="lazy">
+            <figcaption>Harvesting day • CZ2</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="cz6.jpg" alt="Orchard CZ6" loading="lazy">
+            <figcaption>Rows and canopy • CZ6</figcaption>
+          </figure>
+        </div>
       </div>
+
+      <!-- Our Facilities (única vez, con video) -->
+      <div class="about-subsection" id="our-facilities">
+        <h3>Our Facilities</h3>
+        <p class="subsection-intro">
+          State-of-the-art facilities for packing and cold chain management to ensure quality and freshness.
+        </p>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="fac1.jpg" alt="Packing facility (FAC1)" loading="lazy">
+            <figcaption>Packing facility • FAC1</figcaption>
+          </figure>
+          <figure class="media-item">
+            <video controls playsinline preload="metadata" poster="fac2.jpg">
+              <source src="fac2.mp4" type="video/mp4">
+              <source src="fac2.mov" type="video/quicktime">
+              Your browser does not support embedded videos.
+            </video>
+            <figcaption>Facilities video • FAC2</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR FRUITS -->
+  <section id="fruits" class="section fruits">
+    <div class="container">
+      <h2>Our Fruits</h2>
       <div class="fruits-grid">
-        
-        <!-- Cherries -->
-        <div class="fruit-card cherry-card">
+        <div class="fruit-card">
           <h3>Cherries</h3>
-          <p><strong>Season:</strong> November – January</p>
-          <p><strong>Characteristics:</strong> Sweet, firm, deep red color</p>
-          <p><strong>Varieties:</strong> Nimba, Sweet Aryana, Royal Dawn, Santina, Bing, Kordia, Regina, Sweetheart and Rainier</p>
-          <p><strong>Sizes:</strong> XL (24–26 mm), J (26–28 mm), 2J (28–30 mm), 3J (30–32 mm), 4J (32 mm and up)</p>
-          <p><strong>Packaging:</strong> 5 kg and 2.5 kg bulk. 2 lbs clamshells.</p>
+          <p>Hand-picked cherries with exceptional sweetness and firmness.</p>
           <div class="fruit-gallery">
-            <div class="fruit-item"><img src="cz2.jpg" alt="Cherry CZ2"><div class="fruit-overlay">Sweet & Firm</div></div>
-            <div class="fruit-item"><img src="cz3.jpg" alt="Cherry CZ3"><div class="fruit-overlay">Export Quality</div></div>
-            <div class="fruit-item"><img src="cz4.jpg" alt="Cherry CZ4"><div class="fruit-overlay">Deep Red Color</div></div>
-            <div class="fruit-item"><img src="cz5.jpg" alt="Cherry CZ5"><div class="fruit-overlay">Premium Size</div></div>
+            <div class="fruit-item">
+              <img src="cz1.jpg" alt="Cherries 1">
+              <span class="fruit-overlay">Harvest</span>
+            </div>
+            <div class="fruit-item">
+              <img src="cz2.jpg" alt="Cherries 2">
+              <span class="fruit-overlay">Selection</span>
+            </div>
           </div>
         </div>
-        
-        <!-- Sugar Plums -->
-        <div class="fruit-card plum-card">
+        <div class="fruit-card">
           <h3>Sugar Plums</h3>
-          <p><strong>Season:</strong> January – March</p>
-          <p><strong>Characteristics:</strong> Very sweet and firm</p>
-          <p><strong>Packaging:</strong> 9 kg plastic box; 5 kg and 2.5 kg cartons.</p>
+          <p>Sweet and juicy plums, carefully selected to guarantee quality.</p>
           <div class="fruit-gallery">
-            <div class="fruit-item"><img src="sp1.jpg" alt="Plum SP1"><div class="fruit-overlay">Naturally sweet</div></div>
-            <div class="fruit-item"><img src="sp2.jpg" alt="Plum SP2"><div class="fruit-overlay">Juicy & Fresh</div></div>
-            <div class="fruit-item"><img src="sp3.jpg" alt="Plum SP3"><div class="fruit-overlay">Premium Export</div></div>
-            <div class="fruit-item"><img src="sp5.jpg" alt="Plum SP5"><div class="fruit-overlay">Hand-picked</div></div>
+            <div class="fruit-item">
+              <img src="sp1.jpg" alt="Plum 1">
+              <span class="fruit-overlay">Ripeness</span>
+            </div>
+            <div class="fruit-item">
+              <img src="sp2.jpg" alt="Plum 2">
+              <span class="fruit-overlay">Orchard</span>
+            </div>
+            <div class="fruit-item">
+              <img src="sp3.jpg" alt="Plum 3">
+              <span class="fruit-overlay">Export</span>
+            </div>
+            <div class="fruit-item">
+              <img src="sp5.jpg" alt="Plum 5">
+              <span class="fruit-overlay">Packing</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Us -->
-  <section id="contact" class="contact contact-premium section">
-    <div class="contact-overlay"></div>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <div class="contact-glass">
-        <form>
-          <input type="text" placeholder="Your name" required>
-          <input type="email" placeholder="Your email" required>
-          <textarea placeholder="Your message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-      <div class="contact-info">
-        <h3>Servicios La Foresta SPA</h3>
-        <p>La Montaña, Teno.</p>
-        <p>Curicó - Maule Region, Chile</p>
-      </div>
+      <form class="contact-glass">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer section">
-    <div class="container"><p>&copy; 2025 Servicios La Foresta. All rights reserved.</p></div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2024 SLF Export. All rights reserved.</p>
   </footer>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(sec => {
-        sec.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
 </body>
 </html>
