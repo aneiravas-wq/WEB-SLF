@@ -101,6 +101,9 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 👈 hace que la foto se “pegue” y parezca que se mueve */
 }
 .hero-content {
   max-width: 900px;
