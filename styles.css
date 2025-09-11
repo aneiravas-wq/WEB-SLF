@@ -101,9 +101,9 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* 👈 hace que la foto se “pegue” y parezca que se mueve */
+  background-size: cover;          /* que cubra toda la pantalla */
+  background-position: center;     /* centrada */
+  background-attachment: fixed;    /* 👈 efecto parallax simple */
 }
 .hero-content {
   max-width: 900px;
