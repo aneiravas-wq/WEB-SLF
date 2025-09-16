@@ -380,29 +380,30 @@ body {
   margin-top: 40px;
 }
 /* Íconos sociales en Contact */
+/* Íconos sociales en Contact */
 .social-icons {
   margin-top: 24px;
   display: flex;
-  justify-content: center;   /* centrar horizontal */
+  justify-content: center;   /* centrado */
   gap: 32px;                 /* espacio entre íconos */
 }
 
 .social-icons a {
-  font-size: 3rem;           /* tamaño grande */
+  font-size: 3rem;           /* el doble más grandes */
   text-decoration: none;
   transition: transform 0.25s;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);     /* efecto agrandar al pasar mouse */
+  transform: scale(1.2);     /* efecto al pasar el mouse */
 }
 
 .social-icons a.instagram {
-  color: #E4405F; /* Color oficial de Instagram */
+  color: #E4405F; /* color oficial Instagram */
 }
 
 .social-icons a.linkedin {
-  color: #0A66C2; /* Color oficial de LinkedIn */
+  color: #0A66C2; /* color oficial LinkedIn */
 }
 
 /* Opcional: en móviles, un poco más grandes */
