@@ -379,7 +379,30 @@ body {
   text-align: center;
   margin-top: 40px;
 }
+/* Íconos sociales en Contact */
+.social-icons{
+  margin-top:14px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.social-icons a{
+  display:inline-flex;
+  width:40px;height:40px;
+  border-radius:50%;
+  align-items:center;justify-content:center;
+  color:#fff;background:rgba(255,255,255,0.18);
+  text-decoration:none;
+  transition:transform .2s, background .2s, color .2s;
+}
+.social-icons a:hover{transform:translateY(-2px)}
+.social-icons a.instagram:hover{background:#E4405F;color:#fff}
+.social-icons a.linkedin:hover{background:#0A66C2;color:#fff}
 
+/* Opcional: en móviles, un poco más grandes */
+@media (max-width:480px){
+  .social-icons a{width:44px;height:44px}
+}
 /* Animaciones generales */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(26px); }
