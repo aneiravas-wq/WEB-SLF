@@ -2,160 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios La Foresta</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Servicios La Foresta - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <img src="Logo SLF crudo.png" alt="Servicios La Foresta Logo" class="nav-logo" />
+        <a href="index.html" aria-label="Home">
+          <img src="logo slf crudo.png" alt="Servicios La Foresta Logo" class="nav-logo" />
+        </a>
       </div>
       <ul class="nav-menu">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#fruits">Our Fruits</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="fruits.html">Our Fruits</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <!-- Si existía en tu HTML, la dejamos pero la ocultamos por CSS para que no tape nada -->
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Premium Cherries & Fresh Fruits from Chile to the World</h1>
-      <p>Delivering freshness, flavor and quality from the orchards of Chile, at the foothills of the majestic Andes Mountains.</p>
-      <a href="#fruits" class="cta-button">Discover Our Fruits</a>
-    </div>
-  </section>
-
-  <!-- About Us -->
-  <section id="about" class="about">
-    <div class="container about-content">
-      <div class="about-text">
-        <h2>About Us</h2>
-        <p>We are a family-owned company dedicated to the production, packaging, and export of cherries and other fruits. We are located in Chile’s fruit heartland, in the Maule Region. For more than 15 years, we have been working in this industry to deliver the highest quality fruits to the most demanding markets worldwide. Together with our collaborators, growers, and suppliers, we are committed to producing our fruits in an environmentally friendly way, working in a clean and healthy environment to achieve the best possible quality.</p>
+  <!-- HERO -->
+  <main>
+    <section class="section hero">
+      <div class="hero-content">
+        <h1>Premium Cherries & Fresh Fruits from Chile to the World</h1>
+        <p>Delivering freshness, flavor and quality from the orchards of Chile, at the foothills of the majestic Andes Mountains.</p>
+        <a href="fruits.html" class="cta-button">Discover Our Fruits</a>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <!-- Our Orchards (única vez) -->
-    <div class="container about-subsection" id="our-orchards">
-      <h3>Our Orchards</h3>
-      <p class="subsection-intro">A glimpse of our cherry and plum orchards in Chile’s Maule Region.</p>
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="CZ1.jpg" alt="Orchard view (CZ1)" loading="lazy">
-          <figcaption>Orchard • CZ1</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="CZ6.jpg" alt="Orchard view (CZ6)" loading="lazy">
-          <figcaption>Orchard • CZ6</figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <!-- Our Facilities (única vez) -->
-    <div class="container about-subsection" id="our-facilities">
-      <h3>Our Facilities</h3>
-      <p class="subsection-intro">State-of-the-art facilities for packing and cold chain management to ensure quality and freshness.</p>
-      <div class="media-grid">
-        <figure class="media-item">
-          <img src="FAC1.jpg" alt="Packing facility (FAC1)" loading="lazy">
-          <figcaption>Packing facility • FAC1</figcaption>
-        </figure>
-        <figure class="media-item">
-          <video id="fac2Video" controls playsinline preload="metadata" poster="FAC1.jpg" style="background:#000">
-            <source src="FAC2.mp4" type="video/mp4" />
-            <source src="FAC2.MOV" type="video/quicktime" />
-            Your browser does not support embedded videos.
-          </video>
-          <figcaption>Facilities video • FAC2</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Premium Fruits -->
-  <section id="fruits" class="fruits">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Premium Fruits</h2>
-        <p>Exceptional quality from Chilean orchards</p>
-      </div>
-      <div class="fruits-grid">
-        <div class="fruit-card cherry-card">
-          <h3>Cherries</h3>
-          <p><strong>Season:</strong> November – January</p>
-          <p><strong>Characteristics:</strong> Sweet, firm, deep red color</p>
-          <p><strong>Varieties:</strong> Nimba, Sweet Aryana, Royal Dawn, Santina, Bing, Kordia, Regina, Sweetheart and Rainier</p>
-          <p><strong>Sizes:</strong> XL (24–26 mm), J (26–28 mm), 2J (28–30 mm), 3J (30–32 mm), 4J (32 mm and up)</p>
-          <p><strong>Packaging:</strong> 5 kg and 2.5 kg bulk. 2 lbs clamshells.</p>
-        </div>
-        <div class="fruit-card plum-card">
-          <h3>Sugar Plums</h3>
-          <p><strong>Season:</strong> January – March</p>
-          <p><strong>Characteristics:</strong> Very sweet and firm</p>
-          <p><strong>Packaging:</strong> 9 kg plastic box; 5 kg and 2.5 kg cartons.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Us -->
-  <section id="contact" class="contact">
-    <div class="container contact-content">
-      <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form>
-          <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder="Your name" required />
-
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="Your email" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Write your message" required></textarea>
-
-          <button type="submit" class="submit-btn">Submit Form</button>
-        </form>
-      </div>
-      <div class="contact-info">
-        <h3>Servicios La Foresta</h3>
-        <!-- Email removido como pediste -->
-        <p>Curicó</p>
-        <p>Maule Region</p>
-        <p>Chile</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Servicios La Foresta. All rights reserved.</p>
+      <p>© 2025 Servicios La Foresta. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    // Fallback simple si el video falla (sin descargas ni enlaces extras)
-    (function(){
-      const video = document.getElementById('fac2Video');
-      if (!video) return;
-      // Si el navegador no puede reproducir ninguno de los sources, intenta abrir el mp4 en pestaña nueva
-      const timer = setTimeout(() => {
-        if (video.readyState < 1) {
-          window.open('FAC2.mp4', '_blank');
-        }
-      }, 7000);
-      video.addEventListener('loadedmetadata', () => clearTimeout(timer));
-    })();
-  </script>
 </body>
 </html>
