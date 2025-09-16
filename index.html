@@ -72,35 +72,68 @@
     .media-item video{background:#000;outline:none;border:none}
     #our-facilities,#our-facilities *{position:relative;z-index:2}
 
-    /* FRUITS con fondo sp1.jpg */
-    .fruits .section{overflow:hidden;color:#fff}
-    .fruits .section::after{
-      content:"";
-      position:absolute;inset:0;z-index:0;
-      background-image:url("sp1.jpg");
-      background-size:cover;background-position:center;background-repeat:no-repeat;
-      transform:scale(1.02);
-      filter:saturate(1.05);
-    }
-    .fruits .section::before{
-      content:"";
-      position:absolute;inset:0;z-index:1;
-      background:linear-gradient(to bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.45));
-    }
-    .fruits .section > *{position:relative;z-index:2}
-    .section-header{margin-bottom:22px;text-align:center}
-    .section-header h2{font-size:2rem}
-    .section-header p{color:#f0f0f0}
-    .fruits .container{width:92%;max-width:1100px;margin:0 auto;background:rgba(0,0,0,0.50);padding:36px;border-radius:16px;backdrop-filter:blur(8px)}
-    .fruits-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-    .fruit-card{background:rgba(255,255,255,0.12);border-radius:12px;padding:20px;color:#fff;backdrop-filter:blur(6px);transition:transform .28s,box-shadow .28s;box-shadow:0 10px 24px rgba(0,0,0,0.18)}
-    .fruit-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,0.22)}
-    .fruit-gallery{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
-    .fruit-item{position:relative;width:46%}
-    .fruit-item img{width:100%;border-radius:10px;transition:transform .28s}
-    .fruit-item:hover img{transform:scale(1.04)}
-    .fruit-overlay{position:absolute;bottom:8px;left:8px;right:8px;background:rgba(0,0,0,0.6);color:#fff;font-size:.82rem;padding:5px;border-radius:6px;text-align:center}
+<!-- FRUITS (fondo sp1.jpg) -->
+<section id="fruits" class="view fruits">
+  <div class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Fruits</h2>
+        <p>Exceptional quality from Chilean orchards</p>
+      </div>
 
+      <div class="fruits-grid">
+        <!-- Cherries -->
+        <div class="fruit-card">
+          <h3>Cherries</h3>
+          <p>Hand-picked cherries with exceptional sweetness and firmness.</p>
+          <div class="fruit-gallery">
+            <div class="fruit-item">
+              <img src="cz2.jpg" alt="Cherries (cz2)" />
+              <span class="fruit-overlay">Harvest</span>
+            </div>
+            <div class="fruit-item">
+              <img src="cz3.jpg" alt="Cherries (cz3)" />
+              <span class="fruit-overlay">Sorting</span>
+            </div>
+            <div class="fruit-item">
+              <img src="cz4.jpg" alt="Cherries (cz4)" />
+              <span class="fruit-overlay">Orchard</span>
+            </div>
+            <div class="fruit-item">
+              <img src="cz5.jpg" alt="Cherries (cz5)" />
+              <span class="fruit-overlay">Packing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sugar Plums -->
+        <div class="fruit-card">
+          <h3>Sugar Plums</h3>
+          <p>Sweet and juicy plums, carefully selected to guarantee quality.</p>
+          <div class="fruit-gallery">
+            <div class="fruit-item">
+              <img src="sp1.jpg" alt="Sugar Plums (sp1)" />
+              <span class="fruit-overlay">Selection</span>
+            </div>
+            <div class="fruit-item">
+              <img src="sp2.jpg" alt="Sugar Plums (sp2)" />
+              <span class="fruit-overlay">Harvest</span>
+            </div>
+            <div class="fruit-item">
+              <img src="sp3.jpg" alt="Sugar Plums (sp3)" />
+              <span class="fruit-overlay">Quality</span>
+            </div>
+            <div class="fruit-item">
+              <img src="sp5.jpg" alt="Sugar Plums (sp5)" />
+              <span class="fruit-overlay">Packing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     /* CONTACT */
     .contact .section{background:linear-gradient(to bottom right,#b89a72,#8c6a45);color:#fff}
     .contact-content{width:92%;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
