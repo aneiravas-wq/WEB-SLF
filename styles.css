@@ -20,8 +20,8 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #d6c19b; /* Beige del banner */
-  color: #5b1a18;      /* Burdeos */
+  background: #d6c19b;
+  color: #5b1a18;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -77,7 +77,6 @@ body {
   color: #fff;
   overflow: hidden;
 }
-.hero-overlay { display: none; } /* Evita solapes si quedaba en el HTML */
 .hero::after {
   content: "";
   position: absolute;
@@ -100,13 +99,13 @@ body {
 .hero > * { position: relative; z-index: 2; }
 @keyframes mountainsSlide {
   from { background-position:   0px 50%; }
-  to   { background-position: -2400px 50%; } /* ajusta para más/menos desplazamiento */
+  to   { background-position: -2400px 50%; }
 }
 
 .hero-content {
   width: 92%;
   max-width: 900px;
-  background: rgba(214,193,155,0.85); /* Beige translúcido */
+  background: rgba(214,193,155,0.85);
   padding: 40px;
   border-radius: 16px;
   backdrop-filter: blur(3px);
@@ -117,13 +116,13 @@ body {
   font-size: 2.6rem;
   line-height: 1.2;
   margin-bottom: 18px;
-  color: #fff; /* titulo en blanco como pediste antes */
+  color: #fff;
   text-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 .hero p {
   font-size: 1.1rem;
   margin-bottom: 26px;
-  color: #fff; /* subtítulo en blanco */
+  color: #fff;
   text-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 .cta-button {
@@ -213,7 +212,7 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 .media-item video {
-  background: #000; /* evita parpadeos en carga */
+  background: #000;
   outline: none;
   border: none;
 }
@@ -223,14 +222,14 @@ body {
   color: #ddd;
 }
 
-/* VERY IMPORTANT: evitar que algo tape el video */
+/* Evitar que algo tape el video */
 .about,
 .about * { position: relative; }
 #our-facilities { z-index: 2; }
 #our-facilities .media-item video { z-index: 3; }
 #our-facilities .media-item { z-index: 3; }
 
-/* OUR FRUITS */
+/* FRUITS */
 .fruits {
   position: relative;
   color: #fff;
