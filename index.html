@@ -4,153 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Servicios La Foresta</title>
+  <!-- Font Awesome para íconos -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:'Poppins',sans-serif;background:#f5f5f5;color:#333;overflow-x:hidden;line-height:1.5}
-    .container{width:92%;max-width:1200px;margin:0 auto}
-
-    /* Navbar */
-    .navbar{background:#d6c19b;color:#5b1a18;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-    .nav-container{display:flex;justify-content:space-between;align-items:center;height:90px}
-    .logo{display:flex;align-items:center}
-    .nav-logo{height:90px;object-fit:contain}
-    .nav-menu{list-style:none;display:flex;gap:28px}
-    .nav-menu a{text-decoration:none;color:#5b1a18;font-weight:700;position:relative;transition:color .3s}
-    .nav-menu a:hover{color:#000}
-    .nav-menu a.active{color:#872020}
-    .nav-menu a.active::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:3px;background:#872020;border-radius:2px;animation:underline .3s ease}
-    @keyframes underline{from{width:0}to{width:100%}}
-
-    /* Vistas (tabs) */
-    .view{display:none;min-height:calc(100vh - 90px);padding:0}
-    .view.active{display:block}
-    .section{position:relative;min-height:calc(100vh - 90px);padding:40px 0}
-
-    /* HERO con animación de fondo */
-    .hero{display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;overflow:hidden}
-    .hero::after{content:"";position:absolute;inset:0;z-index:0;background-image:url("andes-mountains.jpg");background-repeat:repeat-x;background-position:0 50%;background-size:cover;animation:mountainsSlide 40s linear infinite}
-    .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:1}
-    .hero>*{position:relative;z-index:2}
-    @keyframes mountainsSlide{from{background-position:0 50%}to{background-position:-2400px 50%}}
-    .hero-content{width:92%;max-width:900px;background:rgba(214,193,155,0.85);padding:40px;border-radius:16px;backdrop-filter:blur(3px);animation:fadeUp .9s ease;color:#5b1a18}
-    .hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:18px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,0.25)}
-    .hero p{font-size:1.08rem;margin-bottom:26px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,0.25)}
-    .cta-button{background:#5b1a18;color:#fff;padding:12px 26px;border-radius:26px;font-weight:600;border:none;cursor:pointer;text-decoration:none;transition:background .28s,transform .2s}
-    .cta-button:hover{background:#872020;transform:translateY(-1px)}
-
-    /* ABOUT con fondo lamina8.jpg */
-    .about .section{overflow:hidden}
-    .about .section::after{
-      content:"";
-      position:absolute;inset:0;z-index:0;
-      background-image:url("lamina8.jpg");
-      background-size:cover;background-position:center;background-repeat:no-repeat;
-      transform:scale(1.02);
-    }
-    .about .section::before{
-      content:"";
-      position:absolute;inset:0;z-index:1;
-      background:linear-gradient(to bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.45));
-      backdrop-filter:blur(0.5px);
-    }
-    .about .section > *{position:relative;z-index:2}
-    .about .about-content{display:grid;grid-template-columns:1fr;gap:24px}
-    .about .about-text{width:92%;max-width:1000px;margin:0 auto;background:rgba(0,0,0,0.58);color:#fff;padding:38px;border-radius:16px;backdrop-filter:blur(6px)}
-    .about h2{font-size:2rem;margin-bottom:12px}
-    .about-subsection{width:92%;max-width:1100px;margin:30px auto 0 auto;text-align:center;color:#fff}
-    .about-subsection h3{font-size:1.6rem;margin-bottom:10px}
-    .subsection-intro{color:#eaeaea;margin-bottom:16px}
-    .gallery-grid,.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .gallery-item img,.media-item img,.media-item video{display:block;width:100%;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
-    .gallery-item img{transition:transform .28s}
-    .gallery-item img:hover{transform:scale(1.045)}
-    figure figcaption{margin-top:8px;font-size:.9rem;color:#eee;text-align:center}
-    .media-item video{background:#000;outline:none;border:none}
-    #our-facilities,#our-facilities *{position:relative;z-index:2}
-
-    /* FRUITS con fondo sp1.jpg */
-    .fruits .section{overflow:hidden;color:#fff}
-    .fruits .section::after{
-      content:"";position:absolute;inset:0;z-index:0;
-      background-image:url("sp1.jpg");
-      background-size:cover;background-position:center;background-repeat:no-repeat;
-      transform:scale(1.02);filter:saturate(1.05);
-    }
-    .fruits .section::before{
-      content:"";position:absolute;inset:0;z-index:1;
-      background:linear-gradient(to bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.45));
-    }
-    .fruits .section > *{position:relative;z-index:2}
-    .section-header{margin-bottom:22px;text-align:center}
-    .section-header h2{font-size:2rem}
-    .section-header p{color:#f0f0f0}
-    .fruits .container{
-      width:92%;max-width:1100px;margin:0 auto;
-      background:rgba(0,0,0,0.50);padding:36px;border-radius:16px;backdrop-filter:blur(8px)
-    }
-    .fruits-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch;
-    }
-    .fruit-card{
-      height:100%;
-      display:flex;flex-direction:column;
-      background:rgba(255,255,255,0.12);border-radius:12px;padding:20px;color:#fff;
-      backdrop-filter:blur(6px);transition:transform .28s,box-shadow .28s;
-      box-shadow:0 10px 24px rgba(0,0,0,0.18);
-    }
-    .fruit-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,0.22)}
-    .fruit-gallery{
-      display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;
-    }
-    .fruit-item{
-      position:relative;width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;
-    }
-    .fruit-item img{
-      width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .28s ease;
-    }
-    .fruit-item:hover img{transform:scale(1.04)}
-    .fruit-overlay{
-      position:absolute;left:8px;right:8px;bottom:8px;
-      background:rgba(0,0,0,0.6);color:#fff;font-size:.82rem;padding:5px;border-radius:6px;text-align:center;
-    }
-
-    /* CONTACT */
-    .contact .section{background:linear-gradient(to bottom right,#b89a72,#8c6a45);color:#fff}
-    .contact-content{width:92%;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
-    .contact-form{background:rgba(214,193,155,0.92);border:2px solid #5b1a18;padding:28px;border-radius:16px;color:#5b1a18;box-shadow:0 10px 24px rgba(0,0,0,0.18)}
-    .contact-form h2{margin-bottom:12px;color:#5b1a18}
-    .contact-form label{display:block;font-weight:600;margin:10px 0 6px}
-    .contact-form input,.contact-form textarea{width:100%;padding:12px;border:none;outline:none;border-radius:8px;font-size:1rem;background:rgba(255,255,255,0.9);color:#333}
-    .contact-form textarea{min-height:120px;resize:vertical}
-    .submit-btn{margin-top:14px;background:#5b1a18;color:#fff;padding:12px 20px;border-radius:24px;font-weight:700;border:none;cursor:pointer;transition:background .28s,transform .2s}
-    .submit-btn:hover{background:#872020;transform:translateY(-1px)}
-    .contact-info{background:rgba(0,0,0,0.30);padding:24px;border-radius:16px;backdrop-filter:blur(6px)}
-
-    /* Footer */
-    .footer{background:#222;color:#fff;padding:16px 0;text-align:center}
-
-    /* Animación */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-
-    /* Responsive */
-    @media (max-width:1024px){.nav-menu{gap:20px}.hero h1{font-size:2.2rem}.fruits-grid{gap:20px}}
-    @media (max-width:820px){
-      .nav-container{height:80px}.nav-logo{height:80px}.nav-menu{gap:16px}
-      .hero-content{padding:32px}.hero h1{font-size:2rem}
-      .fruits .container{padding:26px}.fruits-grid{grid-template-columns:1fr}
-      .contact-content{grid-template-columns:1fr}
-      .view{min-height:calc(100vh - 80px)}
-    }
-    @media (max-width:480px){
-      .nav-menu{gap:12px}.hero h1{font-size:1.7rem}.hero p{font-size:1rem}
-      .hero-content{padding:26px}.fruit-item{width:100%}
-    }
-  </style>
+  <!-- 👇 Enlace a tu CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -183,7 +44,7 @@
       </div>
     </section>
 
-    <!-- ABOUT (fondo lamina8.jpg) -->
+    <!-- ABOUT -->
     <section id="about" class="view about">
       <div class="section">
         <div class="container about-content">
@@ -229,7 +90,7 @@
       </div>
     </section>
 
-    <!-- FRUITS (fondo sp1.jpg) -->
+    <!-- FRUITS -->
     <section id="fruits" class="view fruits">
       <div class="section">
         <div class="container">
@@ -244,46 +105,21 @@
               <h3>Cherries</h3>
               <p>Hand-picked cherries with exceptional sweetness and firmness.</p>
               <div class="fruit-gallery">
-                <div class="fruit-item">
-                  <img src="cz2.jpg" alt="Cherries (cz2)" />
-                  <span class="fruit-overlay">Harvest</span>
-                </div>
-                <div class="fruit-item">
-                  <img src="cz3.jpg" alt="Cherries (cz3)" />
-                  <span class="fruit-overlay">Sorting</span>
-                </div>
-                <div class="fruit-item">
-                  <img src="cz4.jpg" alt="Cherries (cz4)" />
-                  <span class="fruit-overlay">Orchard</span>
-                </div>
-                <div class="fruit-item">
-                  <img src="cz5.jpg" alt="Cherries (cz5)" />
-                  <span class="fruit-overlay">Packing</span>
-                </div>
+                <div class="fruit-item"><img src="cz2.jpg" alt="Cherries (cz2)" /><span class="fruit-overlay">Harvest</span></div>
+                <div class="fruit-item"><img src="cz3.jpg" alt="Cherries (cz3)" /><span class="fruit-overlay">Sorting</span></div>
+                <div class="fruit-item"><img src="cz4.jpg" alt="Cherries (cz4)" /><span class="fruit-overlay">Orchard</span></div>
+                <div class="fruit-item"><img src="cz5.jpg" alt="Cherries (cz5)" /><span class="fruit-overlay">Packing</span></div>
               </div>
             </div>
-
             <!-- Sugar Plums -->
             <div class="fruit-card">
               <h3>Sugar Plums</h3>
               <p>Sweet and juicy plums, carefully selected to guarantee quality.</p>
               <div class="fruit-gallery">
-                <div class="fruit-item">
-                  <img src="sp1.jpg" alt="Sugar Plums (sp1)" />
-                  <span class="fruit-overlay">Selection</span>
-                </div>
-                <div class="fruit-item">
-                  <img src="sp2.jpg" alt="Sugar Plums (sp2)" />
-                  <span class="fruit-overlay">Harvest</span>
-                </div>
-                <div class="fruit-item">
-                  <img src="sp3.jpg" alt="Sugar Plums (sp3)" />
-                  <span class="fruit-overlay">Quality</span>
-                </div>
-                <div class="fruit-item">
-                  <img src="sp5.jpg" alt="Sugar Plums (sp5)" />
-                  <span class="fruit-overlay">Packing</span>
-                </div>
+                <div class="fruit-item"><img src="sp1.jpg" alt="Sugar Plums (sp1)" /><span class="fruit-overlay">Selection</span></div>
+                <div class="fruit-item"><img src="sp2.jpg" alt="Sugar Plums (sp2)" /><span class="fruit-overlay">Harvest</span></div>
+                <div class="fruit-item"><img src="sp3.jpg" alt="Sugar Plums (sp3)" /><span class="fruit-overlay">Quality</span></div>
+                <div class="fruit-item"><img src="sp5.jpg" alt="Sugar Plums (sp5)" /><span class="fruit-overlay">Packing</span></div>
               </div>
             </div>
           </div>
@@ -308,21 +144,26 @@
               <button type="submit" class="submit-btn">Submit Form</button>
             </form>
           </div>
-<div class="contact-info">
-  <h3>Servicios La Foresta</h3>
-  <p>Curicó</p>
-  <p>Maule Region</p>
-  <p>Chile</p>
 
- <div class="social-icons">
-  <a class="instagram" href="https://www.instagram.com/servicios_la_foresta_spa" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a class="linkedin" href="https://www.linkedin.com/in/servicios-la-foresta-spa-25b928384" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-</div>
-</div>
+          <div class="contact-info">
+            <h3>Servicios La Foresta</h3>
+            <p>Curicó</p>
+            <p>Maule Region</p>
+            <p>Chile</p>
+
+            <div class="social-icons">
+              <a class="instagram" href="https://www.instagram.com/servicios_la_foresta_spa" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a class="linkedin" href="https://www.linkedin.com/in/servicios-la-foresta-spa-25b928384" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -363,7 +204,7 @@
       showView(location.hash);
     })();
 
-    // Fallback del video: si no carga en 7s, abre el mp4 en pestaña nueva
+    // Fallback del video
     (function(){
       const video = document.getElementById('fac2Video');
       if(!video) return;
