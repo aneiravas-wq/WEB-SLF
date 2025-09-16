@@ -381,23 +381,38 @@ body {
 }
 /* Íconos sociales en Contact */
 .social-icons{
-  margin-top:14px;
+  margin-top:16px;
   display:flex;
-  gap:14px;
+  gap:18px;
   align-items:center;
 }
+
 .social-icons a{
   display:inline-flex;
-  width:40px;height:40px;
+  width:52px;      /* más grande */
+  height:52px;
   border-radius:50%;
-  align-items:center;justify-content:center;
-  color:#fff;background:rgba(255,255,255,0.18);
+  align-items:center;
+  justify-content:center;
+  color:#fff;      /* blanco */
+  background:rgba(255,255,255,0.2);
   text-decoration:none;
   transition:transform .2s, background .2s, color .2s;
 }
-.social-icons a:hover{transform:translateY(-2px)}
-.social-icons a.instagram:hover{background:#E4405F;color:#fff}
-.social-icons a.linkedin:hover{background:#0A66C2;color:#fff}
+
+.social-icons a:hover{
+  transform:translateY(-2px);
+}
+
+.social-icons a.instagram:hover{
+  background:#E4405F;
+  color:#fff;
+}
+
+.social-icons a.linkedin:hover{
+  background:#0A66C2;
+  color:#fff;
+}
 
 /* Opcional: en móviles, un poco más grandes */
 @media (max-width:480px){
