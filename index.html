@@ -26,12 +26,12 @@
     @keyframes underline{from{width:0}to{width:100%}}
 
     /* Vistas (tabs) */
-    .view{display:none;min-height:calc(100vh - 90px);padding:40px 0}
+    .view{display:none;min-height:calc(100vh - 90px);padding:0}
     .view.active{display:block}
-    .section{position:relative}
+    .section{position:relative;min-height:calc(100vh - 90px);padding:40px 0}
 
     /* HERO con animación de fondo */
-    .hero{display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;overflow:hidden;min-height:calc(100vh - 90px)}
+    .hero{display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;overflow:hidden}
     .hero::after{content:"";position:absolute;inset:0;z-index:0;background-image:url("andes-mountains.jpg");background-repeat:repeat-x;background-position:0 50%;background-size:cover;animation:mountainsSlide 40s linear infinite}
     .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:1}
     .hero>*{position:relative;z-index:2}
@@ -42,7 +42,22 @@
     .cta-button{background:#5b1a18;color:#fff;padding:12px 26px;border-radius:26px;font-weight:600;border:none;cursor:pointer;text-decoration:none;transition:background .28s,transform .2s}
     .cta-button:hover{background:#872020;transform:translateY(-1px)}
 
-    /* ABOUT */
+    /* ABOUT con fondo lamina8.jpg */
+    .about .section{overflow:hidden}
+    .about .section::after{
+      content:"";
+      position:absolute;inset:0;z-index:0;
+      background-image:url("lamina8.jpg");
+      background-size:cover;background-position:center;background-repeat:no-repeat;
+      transform:scale(1.02);
+    }
+    .about .section::before{
+      content:"";
+      position:absolute;inset:0;z-index:1;
+      background:linear-gradient(to bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.45));
+      backdrop-filter:blur(0.5px);
+    }
+    .about .section > *{position:relative;z-index:2}
     .about .about-content{display:grid;grid-template-columns:1fr;gap:24px}
     .about .about-text{width:92%;max-width:1000px;margin:0 auto;background:rgba(0,0,0,0.58);color:#fff;padding:38px;border-radius:16px;backdrop-filter:blur(6px)}
     .about h2{font-size:2rem;margin-bottom:12px}
@@ -57,8 +72,22 @@
     .media-item video{background:#000;outline:none;border:none}
     #our-facilities,#our-facilities *{position:relative;z-index:2}
 
-    /* FRUITS */
-    .fruits{color:#fff}
+    /* FRUITS con fondo sp1.jpg */
+    .fruits .section{overflow:hidden;color:#fff}
+    .fruits .section::after{
+      content:"";
+      position:absolute;inset:0;z-index:0;
+      background-image:url("sp1.jpg");
+      background-size:cover;background-position:center;background-repeat:no-repeat;
+      transform:scale(1.02);
+      filter:saturate(1.05);
+    }
+    .fruits .section::before{
+      content:"";
+      position:absolute;inset:0;z-index:1;
+      background:linear-gradient(to bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.45));
+    }
+    .fruits .section > *{position:relative;z-index:2}
     .section-header{margin-bottom:22px;text-align:center}
     .section-header h2{font-size:2rem}
     .section-header p{color:#f0f0f0}
@@ -73,7 +102,7 @@
     .fruit-overlay{position:absolute;bottom:8px;left:8px;right:8px;background:rgba(0,0,0,0.6);color:#fff;font-size:.82rem;padding:5px;border-radius:6px;text-align:center}
 
     /* CONTACT */
-    .contact{background:linear-gradient(to bottom right,#b89a72,#8c6a45);color:#fff}
+    .contact .section{background:linear-gradient(to bottom right,#b89a72,#8c6a45);color:#fff}
     .contact-content{width:92%;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
     .contact-form{background:rgba(214,193,155,0.92);border:2px solid #5b1a18;padding:28px;border-radius:16px;color:#5b1a18;box-shadow:0 10px 24px rgba(0,0,0,0.18)}
     .contact-form h2{margin-bottom:12px;color:#5b1a18}
@@ -85,7 +114,7 @@
     .contact-info{background:rgba(0,0,0,0.30);padding:24px;border-radius:16px;backdrop-filter:blur(6px)}
 
     /* Footer */
-    .footer{background:#222;color:#fff;padding:16px 0;text-align:center;margin-top:40px}
+    .footer{background:#222;color:#fff;padding:16px 0;text-align:center}
 
     /* Animación */
     @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
@@ -124,7 +153,6 @@
     </div>
   </nav>
 
-  <!-- Vistas (una visible a la vez) -->
   <main>
     <!-- HOME -->
     <section id="home" class="view active">
@@ -137,7 +165,7 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT (fondo lamina8.jpg) -->
     <section id="about" class="view about">
       <div class="section">
         <div class="container about-content">
@@ -183,7 +211,7 @@
       </div>
     </section>
 
-    <!-- FRUITS -->
+    <!-- FRUITS (fondo sp1.jpg) -->
     <section id="fruits" class="view fruits">
       <div class="section">
         <div class="container">
@@ -218,7 +246,7 @@
                   <img src="cz6.jpg" alt="Plums placeholder (cz6)" />
                   <span class="fruit-overlay">Packing</span>
                 </div>
-                <!-- Reemplaza por sp1.jpg, sp2.jpg cuando los tengas -->
+                <!-- Puedes reemplazar por sp2.jpg, sp3.jpg cuando los tengas -->
               </div>
             </div>
           </div>
@@ -272,11 +300,11 @@
         const el = document.querySelector(target);
         (el || document.querySelector('#home')).classList.add('active');
 
-        // Activa link
-        document.querySelectorAll('.nav-menu a').forEach(a => a.classList.toggle('active', a.getAttribute('href').toLowerCase() === target));
+        document.querySelectorAll('.nav-menu a').forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href').toLowerCase() === target);
+        });
       }
 
-      // Intercepta clicks y evita el desplazamiento
       links.forEach(a => {
         a.addEventListener('click', (e) => {
           const href = a.getAttribute('href');
@@ -288,9 +316,7 @@
         });
       });
 
-      // Soporte para navegar con back/forward
       window.addEventListener('popstate', () => showView(location.hash));
-      // Carga inicial
       showView(location.hash);
     })();
 
