@@ -18,14 +18,28 @@ body {
   margin: 0 auto;
 }
 
-/* Navbar */
-.navbar {
-  background: #d6c19b;
-  color: #5b1a18;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+/* Navbar: maximizar logo sin salirse del banner */
+.navbar{background:#d6c19b;color:#5b1a18;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden}
+.nav-container{display:flex;justify-content:space-between;align-items:center;height:90px}
+.logo{display:flex;align-items:center;height:100%}
+.logo a{display:flex;align-items:center;height:100%}
+
+/* El logo ocupa casi toda la altura del banner */
+.nav-logo{
+  display:block;
+  height:calc(100% - 8px);   /* margen de seguridad */
+  max-height:calc(100% - 8px);
+  width:auto;
+  object-fit:contain;
+}
+
+/* Responsive: mantener logo grande dentro del banner más bajo */
+@media (max-width:820px){
+  .nav-container{height:80px}
+  .nav-logo{
+    height:calc(100% - 6px);
+    max-height:calc(100% - 6px);
+  }
 }
 .nav-container {
   display: flex;
