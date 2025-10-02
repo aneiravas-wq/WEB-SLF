@@ -1,0 +1,6 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/brizacl/public_html
+    - /bin/cp -r * $DEPLOYPATH
+    # si tienes .htaccess u otros dotfiles, cópialos explícitamente:
+    - if [ -f .htaccess ]; then /bin/cp .htaccess $DEPLOYPATH; fi
